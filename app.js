@@ -27,8 +27,9 @@ function renderCalendar(){
     const story=map.get(day),b=document.createElement("button");b.type="button";b.className=`door ${story?"available":""}`;b.disabled=!story;
     const n=document.createElement("span");n.className="door-number";n.textContent=pad(day);
     const sym=document.createElement("span");sym.className="door-symbol";sym.textContent=story?"✧":"✦";
+    const script=document.createElement("span");script.className="door-script";script.lang="ar";script.dir="rtl";script.textContent=story?"حكاية":"باب";
     const lab=document.createElement("span");lab.className="door-label";lab.textContent=story?"Abrir":"Sellada";
-    b.append(n,sym,lab);if(story)b.addEventListener("click",()=>openStory(story));host.append(b);
+    b.append(n,sym,script,lab);if(story)b.addEventListener("click",()=>openStory(story));host.append(b);
   }
 }
 async function openStory(story){

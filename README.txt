@@ -1,22 +1,27 @@
-LAS VEINTICINCO NOCHES — ACTUALIZACIÓN DE LA WEB
+LAS VEINTICINCO NOCHES — ACTUALIZACIÓN DE ESTÉTICA ORIENTAL
 
 Contenido:
 - index.html
 - styles.css
 - app.js
 
+Cambios visuales:
+- Caligrafía árabe (Amiri) y escritura árabe/persa (Noto Naskh Arabic).
+- Inscripciones breves con significado: «دفتر الحكايات» (libro de relatos), «شب‌های استانبول» (las noches de Estambul), «إسطنبول» (Estambul) y «باب» (puerta).
+- Ornamentación geométrica inspirada en azulejos de İznik, arcos y motivos de manuscritos otomanos.
+- Se conserva la interfaz y el editor de las 25 puertas.
+
 Instrucciones:
 1. Abre el repositorio GitHub Mark08bb/las-veinticinco-noches.
-2. Entra en cada uno de estos tres archivos.
-3. Usa el icono del lápiz (Edit this file) o Add file > Upload files.
-4. Sustituye los archivos existentes por los de esta carpeta (o sube los tres juntos desde el ZIP y confirma la sustitución).
-5. Confirma los cambios en la rama main.
+2. Sustituye los tres archivos de la raíz: index.html, styles.css y app.js.
+3. Confirma los cambios en la rama main.
 
-No borres ni cambies la configuración de Supabase. La actualización conserva:
-- La tabla stories y sus 25 registros.
-- La función editor-desk y sus secretos.
-- El registro mínimo de aperturas.
-- La clave pública de conexión ya configurada.
+No borres ni cambies la configuración de Supabase, las tablas, la función editor-desk ni sus secretos.
+Las fuentes Amiri y Noto Naskh Arabic se cargan desde Google Fonts, por lo que se necesita conexión a internet para mostrarlas.
 
-El acceso al editor aparece como un botón visible “Escritorio de Mehmed”.
-Tras introducir la clave, el panel muestra las 25 puertas en una lista. Puedes seleccionar cualquiera y editar título, acto, sinopsis, relato, URL de imagen, fecha y estado de publicación.
+
+IMÁGENES INCORPORADAS
+- Bósforo, Constantinopla, ca. 1890–1900: Library of Congress, imagen en Wikimedia Commons, sin restricciones conocidas.
+- Azulejos florales otomanos de İznik, c. 1540: Daderot, CC0.
+- “Zal y el Simurg”, miniatura persa de finales del siglo XV o comienzos del XVI: obra en dominio público, Honolulu Museum of Art.
+Las imágenes se cargan desde Wikimedia Commons; se necesita conexión a internet.

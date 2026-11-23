@@ -119,3 +119,159 @@ textarea{resize:vertical;line-height:1.5}
 @media(max-width:760px){.tile-border{width:10px;background-size:10px 10px}.page-shell{padding:16px 18px 24px}.editor-workspace{grid-template-columns:1fr}.editor-sidebar{position:relative;height:auto;max-height:none;overflow:visible;border-right:0;border-bottom:1px solid #b99a5c;padding:14px}.editor-door-list{grid-template-columns:repeat(3,minmax(0,1fr));max-height:230px;overflow:auto}.editor-main{padding:20px 16px}.editor-key{right:12px;bottom:12px;min-width:0;min-height:44px;font-size:.65rem}.editor-header{padding-right:58px}}
 @media(max-width:520px){.page-shell{padding:12px 15px 80px}.top-medallion{width:58px;height:58px}.calendar-section{padding:23px 12px}.calendar-grid{gap:8px}.door{aspect-ratio:.72}.door:before{inset:5px}.door-number{font-size:1.18rem}.door-label{font-size:.68rem}.reader-note{gap:7px}.reader-note p{font-size:.9rem}.editor-door-list{grid-template-columns:repeat(3,minmax(0,1fr))}.editor-main{padding:20px 14px}.story-form .form-grid{grid-template-columns:1fr}.story-form .check-label{padding-top:0}.editor-key{font-size:.58rem;padding:8px 12px;gap:7px}.editor-heading-mark{display:none}.editor-subtitle{font-size:.88rem}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Caligrafía y ornamentación inspiradas en manuscritos otomanos y persas */
+:root{--tile-turquoise:#397f83;--tile-cobalt:#244c78;--tile-ivory:#e9d9b5;--tile-coral:#a95f4d}
+body{
+ background:
+  radial-gradient(ellipse at 50% 0%,#42677a 0,#1c3a53 36%,#0b192b 82%);
+}
+body:after{
+ content:"";position:fixed;inset:12px;pointer-events:none;z-index:1;
+ border:1px solid #c9a45e66;outline:1px solid #c9a45e22;outline-offset:5px;
+}
+.tile-border{
+ width:30px;opacity:.68;
+ background-color:#15344c;
+ background-image:
+  radial-gradient(circle at 50% 50%,#d8bd7a 0 1px,transparent 2px),
+  repeating-conic-gradient(from 22.5deg,#397f83 0 12.5%,#1d4165 0 25%,#c39d58 0 27%,#1d4165 0 50%);
+ background-size:16px 16px,32px 32px;
+ border-color:#d0ae6b;
+}
+.masthead{padding-top:25px}
+.top-medallion{
+ width:88px;height:88px;border:2px solid #d4b56d;
+ box-shadow:0 0 0 4px #d4b56d22,0 0 0 9px #d4b56d10,inset 0 0 0 5px #d4b56d1c;
+ background:radial-gradient(circle,#1b4058,#10263c);
+}
+.calligraphy-title{
+ font-family:Amiri,"Noto Naskh Arabic",serif;font-size:clamp(2rem,5vw,3rem);
+ color:#f0d69b;margin:-4px 0 -3px;line-height:1.25;text-shadow:0 2px 9px #0008;
+}
+.persian-line{
+ font-family:"Noto Naskh Arabic",Amiri,serif;color:#d4b878;font-size:1.22rem;
+ letter-spacing:.02em;margin:0 0 15px;
+}
+.ottoman-caption{
+ font-family:"Noto Naskh Arabic",Amiri,serif;color:#c7b78e;font-size:1rem;
+ margin:-5px 0 7px;
+}
+.arabic-section{
+ font-family:Amiri,"Noto Naskh Arabic",serif;font-size:1.55rem;
+ color:#e1c17b;margin:4px 0 8px!important;letter-spacing:0;
+}
+h1{font-size:clamp(2.1rem,6.7vw,5rem);letter-spacing:.035em}
+.gold-rule{max-width:360px;margin:18px auto}
+.gold-rule:before,.gold-rule:after{height:2px;background:linear-gradient(90deg,transparent,#c9a45e,transparent)}
+.calendar-section{
+ border:3px double #c8a45f;
+ background:
+  radial-gradient(ellipse at center,#1c4057f2,#10253cf7 74%),
+  #142e47;
+ box-shadow:0 22px 75px #0008,inset 0 0 0 7px #c9a45e12;
+}
+.calendar-section:before{
+ inset:12px;border:1px solid #c9a45e99;
+ background:
+  radial-gradient(circle at 0 0,transparent 0 11px,#c9a45e55 12px,transparent 13px),
+  radial-gradient(circle at 100% 0,transparent 0 11px,#c9a45e55 12px,transparent 13px),
+  radial-gradient(circle at 0 100%,transparent 0 11px,#c9a45e55 12px,transparent 13px),
+  radial-gradient(circle at 100% 100%,transparent 0 11px,#c9a45e55 12px,transparent 13px);
+ pointer-events:none;
+}
+.calendar-section:after{
+ opacity:.15;
+ background-image:
+  repeating-conic-gradient(from 45deg,#d6bd7a 0 7%,transparent 0 25%),
+  radial-gradient(circle,#4f9a94 0 2px,transparent 3px);
+ background-size:44px 44px,22px 22px;
+ mask-image:linear-gradient(90deg,#000,transparent 25% 75%,#000);
+}
+.door{
+ border:2px solid #d6b66e;
+ border-radius:48% 48% 4px 4px/24% 24% 4px 4px;
+ background:
+  radial-gradient(ellipse at 50% 34%,#36717b 0,#1d5066 48%,#12344d 100%);
+ box-shadow:inset 0 0 0 4px #d2b46a24,inset 0 0 24px #0009,0 10px 18px #0006;
+}
+.door:before{
+ inset:8px;border:1px solid #e2c77f;
+ border-radius:inherit;
+ background:
+  radial-gradient(circle at 50% 16%,transparent 0 9px,#d7b97066 10px,transparent 11px),
+  linear-gradient(90deg,transparent 49%,#d7b97022 50%,transparent 51%);
+}
+.door:after{content:"۞";font-family:Amiri,serif;font-size:1.05rem;top:9%;color:#e6cd91}
+.door-number{font-size:clamp(1.35rem,4vw,2.2rem);margin-top:18px}
+.door-script{
+ font-family:Amiri,"Noto Naskh Arabic",serif;font-size:1.18rem;
+ line-height:1.05;color:#e5ca8d;margin-top:1px;
+}
+.door-label{font-size:.78rem;color:#e9dfc8}
+.door.available{
+ background:radial-gradient(ellipse at 50% 32%,#5b9587 0,#326b6c 54%,#194451 100%);
+ border-color:#e0cc8d;
+}
+.door.available .door-script{color:#fff0c6}
+.reader-note{border-top:1px solid #b99455;border-bottom:1px solid #b99455;padding:13px 10px}
+.footer-script{
+ font-family:Amiri,"Noto Naskh Arabic",serif;font-size:1.35rem;color:#d6b878;margin-top:6px;
+}
+.editor-header{
+ background:
+  radial-gradient(ellipse at 50% 0,#31576a,#142b42 75%);
+}
+.editor-heading-mark{font-family:Amiri,serif;font-size:1.9rem}
+.editor-sidebar{
+ background:
+  linear-gradient(135deg,#e9d9b8,#d8c39a),
+  #dfcfaa;
+}
+.sidebar-heading:after{content:"ديوان";font-family:Amiri,serif;font-size:1.1rem;color:#8b6b38}
+@media(max-width:760px){
+ .tile-border{width:12px;background-size:10px 10px,16px 16px}
+ body:after{inset:5px}
+ .calendar-section:before{inset:7px}
+}
+@media(max-width:520px){
+ .calligraphy-title{font-size:2rem}
+ .persian-line{font-size:1.05rem}
+ .arabic-section{font-size:1.28rem}
+ .door-script{font-size:1rem}
+ .door-label{font-size:.65rem}
+ .top-medallion{width:70px;height:70px}
+}
+
+
+/* Galería histórica: fotografías y arte de época, integrados como láminas de un álbum */
+.heritage-gallery{
+ width:min(900px,100%);margin:26px auto 28px;display:grid;
+ grid-template-columns:minmax(0,1.6fr) minmax(190px,.9fr);gap:12px;
+ position:relative;z-index:2;text-align:left;
+}
+.heritage-gallery figure{
+ margin:0;min-width:0;padding:7px;background:#e7d6b0;border:1px solid #c7a45f;
+ box-shadow:0 8px 20px #0006,inset 0 0 0 2px #fff5;
+}
+.heritage-gallery img{display:block;width:100%;height:100%;max-height:330px;object-fit:cover;filter:sepia(.12) saturate(.86) contrast(1.02)}
+.heritage-gallery .heritage-main img{min-height:250px;max-height:360px;object-position:center 52%}
+.heritage-gallery figcaption{
+ padding:7px 5px 2px;text-align:center;color:#34445a;font-family:"Cormorant Garamond",serif;
+ font-size:.93rem;line-height:1.2;font-style:italic;
+}
+.heritage-gallery figcaption span{
+ display:inline-block;color:#806039;font-family:Amiri,"Noto Naskh Arabic",serif;
+ font-size:1.12rem;font-style:normal;margin-right:5px;
+}
+.heritage-side{display:grid;grid-template-rows:1fr 1fr;gap:12px;min-height:0}
+.heritage-side figure{display:flex;flex-direction:column;min-height:0}
+.heritage-side img{min-height:110px;max-height:155px;object-fit:cover}
+.heritage-side figure:nth-child(2) img{object-position:center 28%}
+@media(max-width:650px){
+ .heritage-gallery{grid-template-columns:1fr;gap:9px;margin:19px auto 24px}
+ .heritage-gallery .heritage-main img{min-height:170px;max-height:230px}
+ .heritage-side{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:9px}
+ .heritage-side img{height:120px;min-height:120px}
+ .heritage-gallery figcaption{font-size:.8rem;padding:6px 2px 1px}
+}

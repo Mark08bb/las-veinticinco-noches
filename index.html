@@ -5,7 +5,7 @@
 <meta name="theme-color" content="#101d31">
 <meta name="description" content="Las veinticinco noches: un manuscrito de historias, recuerdos y descubrimientos en la Constantinopla otomana de 1890.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css"><title>Las veinticinco noches</title>
 </head>
 <body>
@@ -14,24 +14,43 @@
 <main class="page-shell">
 <header class="masthead">
   <div class="top-medallion" aria-hidden="true"><span>❧</span><i>✦</i><span>❧</span></div>
+  <p class="calligraphy-title" lang="ar" dir="rtl">دفتر الحكايات</p>
+  <p class="persian-line" lang="fa" dir="rtl">شب‌های استانبول</p>
   <p class="eyebrow">Constantinopla · Año 1890 · Taller de Beyazıt</p>
+  <p class="ottoman-caption" lang="ar" dir="rtl">إسطنبول · ألف وثمانمائة وتسعون</p>
   <h1>Las veinticinco <em>noches</em></h1>
   <p class="intro">Hay historias que se escriben para que el tiempo no se lleve ciertas cosas.</p>
   <div class="gold-rule"><span>❧</span></div>
   <p class="welcome">Un manuscrito, veinticinco puertas y todo un mundo aguardando al otro lado.</p>
+  <section class="heritage-gallery" aria-label="Imágenes históricas del mundo de Mehmed">
+    <figure class="heritage-main">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/%28Bosphorus_%28i.e.%2C_Bosporus%29%2C_view_from_Kuleli%2C_Constantinople%2C_Turkey%29_LOC_4210447005.jpg" alt="Vista foto cromática del Bósforo en Constantinopla, entre 1890 y 1900" loading="eager" fetchpriority="high">
+      <figcaption><span lang="ar" dir="rtl">البوسفور</span> El Bósforo · Constantinopla, ca. 1890–1900</figcaption>
+    </figure>
+    <div class="heritage-side">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Two_Hexagonal_Tiles_with_Floral_Arabesque%2C_c._1540%2C_Ottoman_dynasty%2C_Iznik%2C_Turkey_-_Sackler_Museum_-_DSC02523.JPG/500px-Two_Hexagonal_Tiles_with_Floral_Arabesque%2C_c._1540%2C_Ottoman_dynasty%2C_Iznik%2C_Turkey_-_Sackler_Museum_-_DSC02523.JPG" alt="Azulejos otomanos de İznik con arabescos florales, siglo XVI" loading="lazy">
+        <figcaption><span lang="ar" dir="rtl">إزنيق</span> Azulejería de İznik · siglo XVI</figcaption>
+      </figure>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/%27Zal_and_the_Simurgh%27%2C_ink_and_opaque_watercolor_painting_from_Iran%2C_16th_century%2C_Honolulu_Academy_of_Arts.JPG/473px-%27Zal_and_the_Simurgh%27%2C_ink_and_opaque_watercolor_painting_from_Iran%2C_16th_century%2C_Honolulu_Academy_of_Arts.JPG" alt="Miniatura persa del relato de Zal y el Simurg, finales del siglo XV o comienzos del XVI" loading="lazy">
+        <figcaption><span lang="fa" dir="rtl">زال و سیمرغ</span> Miniatura persa · Zal y el Simurg</figcaption>
+      </figure>
+    </div>
+  </section>
   <button class="editor-key" id="editor-key" type="button" aria-label="Abrir el escritorio privado de Mehmed">
     <span aria-hidden="true">✥</span> Escritorio de Mehmed <span aria-hidden="true">✧</span>
   </button>
 </header>
 <section class="calendar-section">
-  <div class="section-heading"><span class="section-kicker">El registro de las noches</span>
+  <div class="section-heading"><span class="section-kicker">El registro de las noches</span><p class="arabic-section" lang="ar" dir="rtl">أبواب الحكايات · خمس وعشرون ليلة</p>
     <h2>Las puertas del manuscrito</h2>
     <p>Algunas todavía guardan silencio. Otras ya pueden contarte su historia.</p>
   </div>
   <div id="calendar" class="calendar-grid" aria-live="polite"><div class="loading-note">El manuscrito está despertando…</div></div>
   <div class="reader-note"><span class="note-flourish">✧</span><p>Al abrir una puerta se anota únicamente su número y el momento de la apertura, para conservar el rastro de la lectura. No se identifica a quien lee.</p><span class="note-flourish">✧</span></div>
 </section>
-<footer class="footer"><div class="footer-rule"></div><p>Copiado con paciencia en el taller de Mehmed Efendi</p><p class="footer-mark">✦　❧　✦</p></footer>
+<footer class="footer"><div class="footer-rule"></div><p>Copiado con paciencia en el taller de Mehmed Efendi</p><p class="footer-mark">✦　❧　✦</p><p class="footer-script" lang="ar" dir="rtl">من إسطنبول، مع الحكايات</p></footer>
 </main>
 
 <div class="modal-backdrop hidden" id="story-modal" role="dialog" aria-modal="true" aria-labelledby="story-title">
