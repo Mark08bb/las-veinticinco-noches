@@ -37,7 +37,7 @@ function makeDoor(day,story){
  b.type="button";
  b.className=`door ${story?"available":"sealed"}`;
  b.disabled=!story;
- b.setAttribute("aria-label",`Puerta ${day}${story?": abierta":": cerrada"}`);
+ b.setAttribute("aria-label",`Puerta ${day}${story?": abierta":": sellada"}`);
 
  const ar=document.createElement("span");
  ar.className="door-script";
@@ -62,7 +62,7 @@ function makeDoor(day,story){
  separator.textContent="/";
  const status=document.createElement("span");
  status.className="door-status";
- status.textContent=story?"Abierta":"Cerrada";
+ status.textContent=story?"ABIERTA":"SELLADA";
  meta.append(dayNumber,separator,status);
 
  const label=document.createElement("span");
@@ -80,7 +80,7 @@ function renderCalendar(){
  ACTS.forEach(act=>{const section=document.createElement("section");section.className="act-section";
  const heading=document.createElement("div");heading.className="act-heading";
  const kicker=document.createElement("div");kicker.className="act-kicker";const left=document.createElement("span"),right=document.createElement("span"),label=document.createElement("b");label.textContent=`Acto ${act.roman}`;kicker.append(left,label,right);
- const title=document.createElement("h3");title.textContent=act.name;const line=document.createElement("p");line.textContent=`«${act.line}»`;heading.append(kicker,title,line);
+ const title=document.createElement("h3");title.textContent=act.name;heading.append(kicker,title);
  const grid=document.createElement("div");grid.className="calendar-grid";for(let day=act.first;day<=act.last;day++)grid.append(makeDoor(day,map.get(day)));
  section.append(heading,grid);host.append(section);});
 }

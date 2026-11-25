@@ -1157,3 +1157,91 @@ body:before {
 .genie-quote {font-size:clamp(1.08rem,2.2vw,1.3rem) !important}
 .footer-script {font-size:1.08rem !important;color:#d7c18c !important}
 .ottoman-caption,.arabic-section {font-size:.88rem !important;letter-spacing:.04em}
+
+
+/* Revisión solicitada: actos discretos y estados de puerta inequívocos. */
+#calendar .act-heading {
+  margin:0 auto 13px !important;
+  opacity:.82;
+}
+#calendar .act-heading .act-kicker {
+  font-size:.66rem !important;
+  letter-spacing:.2em !important;
+  color:#b9a477 !important;
+  opacity:.78;
+}
+#calendar .act-heading h3 {
+  margin:2px 0 0 !important;
+  font-family:"Cormorant Garamond","EB Garamond",serif !important;
+  font-size:clamp(1.12rem,2vw,1.42rem) !important;
+  font-weight:500 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase;
+  color:#c8b98f !important;
+  text-shadow:none !important;
+}
+#calendar .act-heading p {display:none !important}
+#calendar .act-section {margin-bottom:4px}
+#calendar .door-meta {
+  font-size:clamp(.68rem,1.2vw,.82rem) !important;
+  letter-spacing:.12em !important;
+  font-weight:600;
+}
+#calendar .door-status {
+  font-size:.82em !important;
+}
+#calendar .door-card.is-sealed .door-status {
+  color:#b6a58a !important;
+}
+#calendar .door-card.has-story .door-status {
+  color:#b9d7c4 !important;
+}
+#calendar .door-card > .door-caption {
+  max-width:100% !important;
+  padding:0 2px !important;
+  font-size:clamp(.7rem,1.1vw,.84rem) !important;
+  line-height:1.12 !important;
+  letter-spacing:.015em;
+}
+@media(max-width:420px) {
+  #calendar .act-heading h3 {font-size:1rem !important}
+  #calendar .act-heading .act-kicker {font-size:.59rem !important}
+}
+
+
+/* Ajuste fino: número centrado en el hueco del medallón de la puerta. */
+#calendar .door-card > button.door {
+  background-size:100% 100% !important;
+  background-position:center center !important;
+}
+#calendar .door-card > button.door .door-script {
+  position:absolute !important;
+  left:50% !important;
+  top:52.5% !important;
+  transform:translate(-50%,-50%) !important;
+  width:34% !important;
+  text-align:center !important;
+  display:block !important;
+  margin:0 !important;
+  padding:0 !important;
+  line-height:1 !important;
+  font-size:clamp(1.55rem,4vw,2.45rem) !important;
+  z-index:5 !important;
+}
+#calendar .door-card > button.door .door-symbol {
+  top:39.5% !important;
+  left:50% !important;
+  transform:translate(-50%,-50%) !important;
+}
+@media(max-width:680px) {
+  #calendar .door-card > button.door .door-script {
+    top:52.5% !important;
+    font-size:clamp(1.25rem,5.2vw,1.8rem) !important;
+  }
+}
+@media(max-width:420px) {
+  #calendar .door-card > button.door .door-script {
+    top:52.5% !important;
+    font-size:clamp(1rem,5.1vw,1.35rem) !important;
+  }
+}
