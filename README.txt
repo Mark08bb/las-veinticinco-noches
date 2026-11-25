@@ -61,3 +61,19 @@ NUEVA EDICIÓN MULTICULTURAL Y GENIO
   acentos en hindi y persa, coherentes con los espacios culturales del calendario.
 - Fondo con estrellas, resplandores lentos y geometría girih muy tenue.
 - El retrato del Genio usa la imagen facilitada por el usuario (genio.webp).
+
+
+REVISIÓN DE PUERTAS Y ACTOS
+- La línea bajo cada puerta indica el número del día y su estado: ABIERTA o SELLADA.
+- El título del relato aparece debajo de la puerta sólo cuando la historia está disponible.
+- Se han retirado las frases descriptivas de los actos para no anticipar ni revelar
+  elementos de los relatos.
+- Los nombres de los actos permanecen como separadores discretos, con menor tamaño,
+  contraste y peso tipográfico.
+
+
+AJUSTE DE ALINEACIÓN DEL NÚMERO
+El número arábigo oriental se ha fijado al centro visual del medallón de la puerta
+(52,5 % de la altura de la ilustración), con la imagen a escala 100 % para evitar
+recortes que desplacen el hueco respecto al número. La misma posición se conserva
+en escritorio y móvil.
