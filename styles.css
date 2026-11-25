@@ -1027,3 +1027,133 @@ body:before{
   #calendar .door-card > button.door .door-script {font-size:.68rem !important}
   #calendar .door-card > .door-caption {font-size:.59rem !important;min-height:2.4em !important}
 }
+
+
+/* =========================================================
+   NOCHE VIVA — constelaciones, reflejos y geometría iluminada
+   ========================================================= */
+body {
+  background:
+    radial-gradient(ellipse at 50% 3%, #203d61 0%, transparent 34%),
+    radial-gradient(ellipse at 8% 42%, #102a43 0%, transparent 36%),
+    radial-gradient(ellipse at 94% 68%, #14253e 0%, transparent 33%),
+    linear-gradient(180deg,#07152b 0%,#050d1c 54%,#020712 100%) !important;
+}
+body:before {
+  opacity:.13 !important;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'%3E%3Cg fill='none' stroke='%23c9a45e' stroke-opacity='.62' stroke-width='.7'%3E%3Cpath d='M64 5L77 27L101 19L93 44L116 64L93 84L101 109L77 101L64 123L51 101L27 109L35 84L12 64L35 44L27 19L51 27Z'/%3E%3Cpath d='M64 24L74 51L101 64L74 77L64 104L54 77L27 64L54 51Z'/%3E%3Ccircle cx='64' cy='64' r='14'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(ellipse at center,transparent 30%,#02061188 100%) !important;
+  background-size:128px 128px,cover !important;
+  animation:girih-drift 90s linear infinite;
+}
+.sky-glow {
+  opacity:.48 !important;
+  background-image:
+    radial-gradient(1.1px 1.1px at 12px 17px,#f0d99c 98%,transparent),
+    radial-gradient(1px 1px at 41px 62px,#b6d2d3 98%,transparent),
+    radial-gradient(1.3px 1.3px at 79px 34px,#e6c67d 98%,transparent),
+    radial-gradient(1px 1px at 104px 91px,#d8e1e8 98%,transparent);
+  background-size:137px 137px,173px 173px,211px 211px,257px 257px;
+  animation:star-drift 70s linear infinite;
+}
+.sky-glow:before,.sky-glow:after {
+  content:"";
+  position:absolute;
+  inset:-10%;
+  pointer-events:none;
+}
+.sky-glow:before {
+  background:
+    radial-gradient(ellipse at 18% 22%,#d3b36b20 0,transparent 24%),
+    radial-gradient(ellipse at 82% 38%,#7daebc20 0,transparent 27%),
+    radial-gradient(ellipse at 55% 82%,#b28b5120 0,transparent 25%);
+  filter:blur(20px);
+  animation:lantern-breathe 12s ease-in-out infinite alternate;
+}
+.sky-glow:after {
+  background-image:
+    radial-gradient(circle,#f4d99b 0 1px,transparent 1.8px),
+    radial-gradient(circle,#a9cbd0 0 .8px,transparent 1.6px);
+  background-size:193px 193px,263px 263px;
+  background-position:27px 11px,104px 83px;
+  opacity:.48;
+  animation:twinkle 5.5s ease-in-out infinite alternate;
+}
+@keyframes girih-drift {from{background-position:0 0,center}to{background-position:128px 128px,center}}
+@keyframes star-drift {from{background-position:0 0,41px 67px,80px 22px,13px 92px}to{background-position:137px 137px,214px 240px,291px 233px,270px 349px}}
+@keyframes lantern-breathe {from{opacity:.52;transform:scale(.98)}to{opacity:1;transform:scale(1.04)}}
+@keyframes twinkle {from{opacity:.22}to{opacity:.68}}
+@media(prefers-reduced-motion:reduce) {
+ body:before,.sky-glow,.sky-glow:before,.sky-glow:after {animation:none !important}
+}
+
+/* Numeral central in the illuminated door; day and state are kept below. */
+#calendar .door-card > button.door .door-script {
+  top:50% !important;
+  left:50% !important;
+  transform:translate(-50%,-50%) !important;
+  font-size:clamp(1.5rem,4vw,2.6rem) !important;
+  font-weight:700 !important;
+  color:#f7dfa0 !important;
+  text-shadow:0 2px 4px #120b06,0 0 13px #e2b957aa !important;
+}
+#calendar .door-card > button.door .door-symbol {top:34% !important}
+#calendar .door-card > button.door .door-number {display:none !important}
+#calendar .door-meta {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  min-height:19px;
+  color:#e7d6ad;
+  font-family:"Cormorant SC","Cormorant Garamond",serif;
+  font-size:clamp(.72rem,1.4vw,.94rem);
+  letter-spacing:.08em;
+  line-height:1;
+  text-transform:uppercase;
+  text-shadow:0 1px 8px #0009;
+}
+#calendar .door-day {font-family:"Cinzel",serif;font-weight:700;color:#f0d9a0}
+#calendar .door-meta-separator {color:#a98b58;opacity:.9}
+#calendar .door-status {color:#b9c9bd;font-size:.88em}
+#calendar .door-card.is-sealed .door-status {color:#9b9ca5}
+#calendar .door-card.has-story .door-status {color:#a8d1bd}
+#calendar .door-card > .door-caption {
+  margin-top:-2px !important;
+  min-height:2.2em !important;
+  color:#c9bea5 !important;
+  font-size:clamp(.68rem,1.2vw,.86rem) !important;
+}
+@media(max-width:680px) {
+  #calendar .door-meta {gap:4px;font-size:.68rem}
+  #calendar .door-card > button.door .door-script {font-size:clamp(1.15rem,5vw,1.7rem) !important}
+}
+@media(max-width:420px) {
+  #calendar .door-meta {font-size:.57rem;gap:3px;letter-spacing:.03em}
+  #calendar .door-card > .door-caption {font-size:.55rem !important}
+}
+
+/* Genio: retrato del usuario en lugar del sello tipográfico. */
+.genie-avatar {
+  display:block !important;
+  flex:none !important;
+  width:74px !important;
+  height:74px !important;
+  object-fit:cover !important;
+  object-position:center 34% !important;
+  border-radius:50% !important;
+  border:2px solid #c9a45e !important;
+  padding:3px !important;
+  background:linear-gradient(145deg,#1b3851,#071426) !important;
+  box-shadow:0 0 0 4px #c9a45e20,0 0 24px #79b8bd33 !important;
+}
+.genie-bubble-copy {
+  border-color:#c9a45e88 !important;
+  background:linear-gradient(120deg,#102743f2,#08172cf2) !important;
+}
+.genie-bubble-copy:before {background:#102743 !important;border-color:#c9a45e88 !important}
+.genie-label {color:#e4c57e !important}
+.genie-quote {font-size:clamp(1.08rem,2.2vw,1.3rem) !important}
+.footer-script {font-size:1.08rem !important;color:#d7c18c !important}
+.ottoman-caption,.arabic-section {font-size:.88rem !important;letter-spacing:.04em}

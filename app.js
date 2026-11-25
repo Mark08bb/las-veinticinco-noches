@@ -37,11 +37,7 @@ function makeDoor(day,story){
  b.type="button";
  b.className=`door ${story?"available":"sealed"}`;
  b.disabled=!story;
- b.setAttribute("aria-label",`Puerta ${day}${story?": abrir relato":": todavía sellada"}`);
-
- const n=document.createElement("span");
- n.className="door-number";
- n.textContent=pad(day);
+ b.setAttribute("aria-label",`Puerta ${day}${story?": abierta":": cerrada"}`);
 
  const ar=document.createElement("span");
  ar.className="door-script";
@@ -53,14 +49,28 @@ function makeDoor(day,story){
  mark.className="door-symbol";
  mark.setAttribute("aria-hidden","true");
  mark.textContent="✦";
+ b.append(ar,mark);
 
- b.append(n,ar,mark);
+ const meta=document.createElement("div");
+ meta.className="door-meta";
+ const dayNumber=document.createElement("span");
+ dayNumber.className="door-day";
+ dayNumber.textContent=String(day);
+ const separator=document.createElement("span");
+ separator.className="door-meta-separator";
+ separator.setAttribute("aria-hidden","true");
+ separator.textContent="/";
+ const status=document.createElement("span");
+ status.className="door-status";
+ status.textContent=story?"Abierta":"Cerrada";
+ meta.append(dayNumber,separator,status);
 
  const label=document.createElement("span");
  label.className="door-caption";
- label.textContent=story?(story.title||"Abrir historia"):"Aún sellada";
+ label.textContent=story?(story.title||"Relato disponible"):"";
 
- card.append(b,label);
+ card.append(b,meta);
+ if(story) card.append(label);
  if(story)b.addEventListener("click",()=>openStory(story));
  return card;
 }

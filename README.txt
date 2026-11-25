@@ -51,3 +51,13 @@ sombra y marco interior. El número y el numeral oriental quedan centrados en
 el medallón; la estrella se mantiene discreta. El título de cada día aparece
 debajo de la puerta, fuera de la ilustración, para evitar amontonar texto sobre
 el relieve y mejorar la lectura en móvil.
+
+
+NUEVA EDICIÓN MULTICULTURAL Y GENIO
+- El número arábigo oriental aparece ahora en el centro de la puerta.
+- Debajo figura el número del día y su estado: Abierta / Cerrada.
+- El título del relato queda como segunda línea discreta.
+- Se han reducido las frases decorativas en árabe y se han repartido breves
+  acentos en hindi y persa, coherentes con los espacios culturales del calendario.
+- Fondo con estrellas, resplandores lentos y geometría girih muy tenue.
+- El retrato del Genio usa la imagen facilitada por el usuario (genio.webp).
